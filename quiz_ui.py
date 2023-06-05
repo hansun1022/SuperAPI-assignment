@@ -44,7 +44,7 @@ class QuizInterface:
         self.window.mainloop()
 
     def display_title(self):
-        """To display title"""
+        """About title"""
 
         # Title
         title = Label(self.window, text="Let's play a Quiz Game",
@@ -55,13 +55,13 @@ class QuizInterface:
 
 
     def display_question(self):
-        """To display the question"""
+        """About question"""
 
         q_text = self.quiz.next_question()
         self.canvas.itemconfig(self.question_text, text=q_text)
 
     def radio_buttons(self):
-        """To create four options (radio buttons)"""
+        """About four options (radio buttons)"""
 
         # initialize the list with an empty list of options
         choice_list = []
@@ -89,7 +89,7 @@ class QuizInterface:
         return choice_list
 
     def display_options(self):
-        """To display four options"""
+        """About four options"""
 
         val = 0
 
@@ -104,7 +104,7 @@ class QuizInterface:
             val += 1
 
     def next_btn(self):
-        """To show feedback for each answer and keep checking for more questions"""
+        """About feedback for each answer and keep checking for more questions"""
 
         # Check if the answer is correct
         if self.quiz.check_answer(self.user_answer.get()):
@@ -127,7 +127,7 @@ class QuizInterface:
             self.window.destroy()
 
     def buttons(self):
-        """To show next button and quit button"""
+        """About next button and quit button"""
 
         # The first button is the Next button to move to the
         # next Question
@@ -145,7 +145,7 @@ class QuizInterface:
         quit_button.place(x=700, y=60)
 
     def display_result(self):
-        """To display the result using messagebox"""
+        """About the result using messagebox"""
         correct, wrong, score_percent = self.quiz.get_score()
 
         correct = f"Correct: {correct}"
